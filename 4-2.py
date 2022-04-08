@@ -1,3 +1,3 @@
 text = input()
-data ={text}
-print(data.items())
+res = {letter: text.count(letter) for letter in text}
+print(res)

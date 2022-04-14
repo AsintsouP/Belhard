@@ -2,9 +2,11 @@
 k = 100
 m = 2
 n = 3
-i = 0
-while i < n:
-    for i in range(k, ):
+counter = 0
+while counter < n:
+    if counter == n:
+        break
+    for i in range(k, 1000):
         if i % m == 0 and i > k:
-            i += 1
             print(i)
+    counter += 1

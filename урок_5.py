@@ -7,9 +7,10 @@
 text = input()
 for i, elem in enumerate(text):
     if not i % 2:
-        print(text)
-for i in range(0, len(text), 2):
-        print(text[i])
+        print(elem)
+
+# for i in range(0, len(text), 2):
+#         print(text[i])
 
 
 # reserved_number = 0

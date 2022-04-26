@@ -4,9 +4,42 @@ class BookCard:
     year: int
 
     def __init__(self, author, title, year):
-        self.author = author
-        self.title = title
-        self.year = year
+        self.__author = author
+        self.__title = title
+        self.__year = year
+
+    @property
+    def author(self):
+        return self.__author
+
+    @author.setter
+    def author(self, value):
+        if isinstance(value, str):
+            self.__author = value
+        else:
+            raise ValueError
+
+    @property
+    def title(self):
+        return self.__title
+
+    @title.setter
+    def title(self, value):
+        if isinstance(value, str):
+            self.title = value
+        else:
+            raise ValueError
+
+    @property
+    def year(self):
+        return self.__year
+
+    @year.setter
+    def year(self, value):
+        if isinstance(value, int):
+            self.year = value
+        else:
+            raise ValueError
 
     def __repr__(self):
         return repr((self.author, self.title, self.year))
@@ -20,35 +53,4 @@ book_objects = [
 
 print(sorted(book_objects, key=lambda book: book.year))
 
-# @property
-# def author(self):
-#     return self.__author
-#
-# @author.setter
-# def author(self, value):
-#     if isinstance(value, str):
-#         self.__author = value
-#     else:
-#         raise ValueError
-#
-# @property
-# def title(self):
-#     return self.__title
-#
-# @title.setter
-# def title(self, value):
-#     if isinstance(value, str):
-#         self.title = value
-#     else:
-#         raise ValueError
-#
-# @property
-# def year(self):
-#     return self.__year
-#
-# @year.setter
-# def year(self, value):
-#     if isinstance(value, int):
-#         self.year = value
-#     else:
-#         raise ValueError
+
